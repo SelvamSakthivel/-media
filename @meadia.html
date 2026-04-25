@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body{
+            background-color: yellow;
+            color: black;
+        }
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        li{
+            text-decoration: none;
+            overflow: hidden;
+        }
+        #parent{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin-left: 60%;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width:1200px){
+            body{
+                background-color: aqua;
+            }
+            h1{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+            }
+            #parent{
+                display: grid;
+                grid-template-rows: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- How to create one responsive web design -->
+     <h1>Selvam Is A Developer</h1>
+     <main id="main">
+        <ul id="parent">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Project</li>
+            <li>About</li>
+        </ul>
+     </main>
+</body>
+</html>
+
+
+<!-- Real time Project -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Example</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/*  Mobile View Concept */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;  
+    }
+
+    .navbar:hover .nav-links {
+        display: block;  
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>My Portfolio</h2>
+    <div class="nav-links">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Grid</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Moble */
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; 
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h2>My Projects</h2>
+
+<div class="container">
+    <div class="card">Project 1</div>
+    <div class="card">Project 2</div>
+    <div class="card">Project 3</div>
+    <div class="card">Project 4</div>
+    <div class="card">Project 5</div>
+    <div class="card">Project 6</div>
+</div>
+
+</body>
+</html>
